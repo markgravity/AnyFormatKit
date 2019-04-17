@@ -79,8 +79,8 @@ private extension ViewController {
     
     phoneNumberField.textInputDelegates.add(delegate: self)
     phoneNumberField.defaultTextAttributes = [
-      NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-      NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 22, weight: .regular)]
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .regular)] as [NSAttributedString.Key : Any]
     phoneNumberField.addAttributes([.foregroundColor : ColorConstants.yellow], range: NSRange(location: 0, length: 3))
   }
   
@@ -92,8 +92,8 @@ private extension ViewController {
     sumInputField.textInputDelegates.add(delegate: self)
     sumInputField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
     sumInputField.defaultTextAttributes = [
-      NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
-      NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 22, weight: .regular)]
+        NSAttributedString.Key.foregroundColor: UIColor.white,
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .regular)] as [NSAttributedString.Key : Any]
     sumInputField.addAttributes([.foregroundColor : ColorConstants.yellow], range: NSRange(location: 0, length: 2))
   }
 
@@ -112,8 +112,8 @@ private extension ViewController {
     cardNumberView.tintColor = ColorConstants.gray
     
     cardNumberView.typingAttributes = [
-      NSAttributedStringKey.font.rawValue: UIFont.systemFont(ofSize: 22, weight: .regular),
-      NSAttributedStringKey.foregroundColor.rawValue: UIColor.white]
+        NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .regular),
+        NSAttributedString.Key.foregroundColor: UIColor.white]  as [NSAttributedString.Key : Any]
     cardNumberView.addAttributes([.foregroundColor : ColorConstants.yellow], range: NSRange(location: 0, length: 4))
   }
   
